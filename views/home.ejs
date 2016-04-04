@@ -1,23 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <title>FCC File Metadata Microservice</title>
+    <% include partials/head.ejs %>
   </head>
   <body>
     <div class="container-fluid">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-              <img alt="Brand" src="http://helpx.adobe.com/content/dam/help/en/Acrobat-com/ac_upload_file.png">
-            </a>
-          </div>
-        </div>
-      </nav>
+
+      <% include partials/header.ejs %>
 
       <div class="jumbotron">
         <h1>File Metadata Microservice</h1>
@@ -44,6 +33,10 @@
           </ul>
         </div>
       </div><!-- end panel -->
+
+        <% include partials/footer.ejs %>
+
     </div><!-- end container -->
+    <% include scripts.ejs %>
   </body>
 </html>
