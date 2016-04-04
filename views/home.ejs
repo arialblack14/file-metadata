@@ -12,27 +12,19 @@
         <h1>File Metadata Microservice</h1>
         <p>Just another file uploading metadata analysing microservice for the freecodecamp curriculum.</p>
       </div><!-- end jumbotron -->
-
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          Objective
-        </div>
-        <div class="panel-body">
-          Build a full stack JavaScript app that is functionally similar to <a href="https://cryptic-ridge-9197.herokuapp.com/">this</a>.
-        </div>
+      <div class="container">
+        <p>This is a very simple test harness which posts to '/api/fileanalyse' Take a look at View page source to see how it works.</p>
+        <form id="file-form" method="post" enctype="multipart/form-data">
+          <div class="form-inline">
+              <span class="btn btn-success fileinput-button">
+                  <i class="glyphicon glyphicon-plus"></i>
+                  <span> Add files</span>
+                  <input type="file" name="file">
+                  <input type="submit" value="Upload" />
+              </span>
+          </div>
+        </form>
       </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          Here are the specific user stories you should implement for this project:
-        </div>
-        <div class="panel-body">
-          <ul>
-            <li>I can submit a FormData object that includes a file upload.</li>
-            <li>When I submit something, I will receive the file size in bytes within the JSON response</li>
-            <li>You may want to use <a href="https://www.npmjs.com/package/multer">this</a> package</li>
-          </ul>
-        </div>
-      </div><!-- end panel -->
 
         <% include partials/footer.ejs %>
 

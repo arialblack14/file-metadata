@@ -4,13 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var multer = require('multer'); // Middleware for uploading files
+// var multer = require('multer'); // Middleware for uploading files
 
 // Use multer Middleware
-var upload = multer({ dest: 'uploads/' }); // Set destination folder
+// var upload = multer({ dest: './uploads/' }); // Set destination folder
 
 // Set routes
 var routes = require('./routes/index');
+// Custom upload Router
+var uploadRouter = require('./routes/uploadRouter');
 
 var app = express();
 
@@ -27,6 +29,8 @@ app.use(cookieParser());
 
 // Use app routes
 app.use('/', routes);
+app.use('/api/fileanalyse', uploadRouter);
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // catch 404 and forward to error handler
