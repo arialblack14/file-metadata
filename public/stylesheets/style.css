@@ -48,7 +48,7 @@ footer {
     padding-left: 20px;
 }
 
-.btn {
+.btn, input {
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -57,4 +57,9 @@ footer {
 
 form {
   margin: 0 auto;
+}
+
+input {
+  color: #49595E;
+  margin: 5px;
 }

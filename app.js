@@ -11,8 +11,6 @@ var bodyParser = require('body-parser');
 
 // Set routes
 var routes = require('./routes/index');
-// Custom upload Router
-var uploadRouter = require('./routes/uploadRouter');
 
 var app = express();
 
@@ -29,7 +27,6 @@ app.use(cookieParser());
 
 // Use app routes
 app.use('/', routes);
-app.use('/api/fileanalyse', uploadRouter);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
