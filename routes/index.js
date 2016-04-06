@@ -5,16 +5,16 @@ var router = express.Router();
 
 // https://codeforgeek.com/2014/11/file-uploads-using-node-js/
 // declare Multer storage
-var storage = multer.diskStorage({
-  destination: function(req, file, callback) {
-    callback(null, './uploads');
-  },
-  filename: function(req, file, callback) {
-    callback(null, file.fieldname + '_' + Date.now()); // Make file name unique
-}
-});
+// var storage = multer.diskStorage({
+//   destination: function(req, file, callback) {
+//     callback(null, './uploads');
+//   },
+//   filename: function(req, file, callback) {
+//     callback(null, file.fieldname + '_' + Date.now()); // Make file name unique
+// }
+// });
 
-var upload = multer({ storage: storage }).single('userFile');
+var upload = multer({ dest: 'uploads/' }).single('userFile');
 
 /* GET home page. */
 router.get('/', function(req, res) {
