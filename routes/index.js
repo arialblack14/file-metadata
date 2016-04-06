@@ -24,7 +24,7 @@ router.get('/', function(req, res) {
 .post('/api/fileanalyse', function(req, res) {
   upload(req, res, function(err) {
     if (err) {
-      return res.status(404).end("Error uploading file.");
+      return res.status(404).render('error');
     }
     console.log("req.file : ", req.file," - req.body : ", req.body);
     res.send({ filename: req.file.filename, size: req.file.size });
