@@ -27,7 +27,7 @@ router.get('/', function(req, res) {
       return res.status(404).end("Error uploading file.");
     }
     console.log("req.file : ", req.file," - req.body : ", req.body);
-    res.send(req.file);
+    res.send({ filename: req.file.filename, size: req.file.size });
   });
 });
 
